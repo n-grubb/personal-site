@@ -1,0 +1,126 @@
+/* Themable CSS props listed here */
+:root {
+  /**
+     * Base Size
+     * This gets set as the root font-size. 
+     * Since we utilize the rem unit heavily, almost all calculations will be based off this value. 
+     */
+  --base-size: 16px;
+
+  /**
+     * Harmonic Size Scale
+     * My version has fixed lower sizing with a harmonic scale on values above the base size.
+     * This prevents workign with strange values like 5.0625px.
+     * --s can stand for size, scale, or space. Whatever floats your boat.
+     * @see https://every-layout.dev/rudiments/modular-scale/
+     */
+  --ratio: 1.5;
+  --s-xxxs: 0.125rem;
+  --s-xxs: 0.25rem;
+  --s-xs: 0.5rem;
+  --s-sm: 0.75rem;
+  --s: 1rem;
+  --s-lg: calc(var(--s) * var(--ratio));
+  --s-xl: calc(var(--s-lg) * var(--ratio));
+  --s-xxl: calc(var(--s-xl) * var(--ratio));
+  --s-xxxl: calc(var(--s-xxl) * var(--ratio));
+
+  /* Define a minimum tap area to be used to ensure interactive elements are adequately sized for tap controls */
+  --min-tap-area: 48px;
+
+  /**
+     * Color Definitions
+     */
+
+  /* Default Colors */
+  --primary: var(--oc-white);
+  --secondary: var(--oc-black);
+  --accent: var(--oc-orange-8);
+
+  /**
+     * Font Definitions
+     */
+
+  /* Font Families */
+  --sans: SF Pro Display, Helvetica Neue, Helvetica, Arial, sans-serif;
+  --serif: serif;
+
+  /* Global Text Color */
+  --text-color: var(--primary);
+  --text-color-light: var(--oc-gray-6);
+  --text-color-lighter: var(--oc-gray-3);
+
+  /* Text Sizing */
+  --text-xs: 0.75em;
+  --text-sm: 0.875em;
+  --text-md: 1em;
+  --text-lg: 1.25em;
+  --text-xl: 1.5em;
+  --text-xxl: 2em;
+
+  /* Font Weights */
+  --font-lighter: 300;
+  --font-light: 400;
+  --font-medium: 500;
+  --font-semi: 600;
+  --font-bold: 700;
+
+  /* Line Height / Leading */
+  --leading-none: 1;
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-loose: 2;
+
+  /**
+     * Global Border Settings
+     */
+  --border-color-light: var(--neutral-300);
+  --border-color-medium: var(--neutral);
+  --border-color-dark: var(--neutral-700);
+
+  --border-thickness-light: var(--s-xxxs);
+  --border-thickness-medium: var(--s-xxs);
+  --border-thickness-heavy: var(--s-xs);
+
+  --border-radius-sm: 2px;
+  --border-radius-md: 4px;
+  --border-radius-lg: 8px;
+  --border-rounded: 50%;
+
+  --border-light: var(--border-thickness-light) solid var(--border-color-light);
+  --border-medium: var(--border-thickness-medium) solid
+    var(--border-color-medium);
+
+  /**
+     * Box Shadow Options
+     */
+  --shadow-xs: 0 1px 3px hsla(0, 0%, 0%, 0.2);
+  --shadow-sm: 0 4px 6px hsla(0, 0%, 0%, 0.2);
+  --shadow-md: 0 5px 15px hsla(0, 0%, 0%, 0.2);
+  --shadow-lg: 0 10px 24px hsla(0, 0%, 0%, 0.2);
+  --shadow-xl: 0 15px 35px hsla(0, 0%, 0%, 0.2);
+
+  /* for a direct + ambient light effect */
+  --double-shadow-xs: 0 1px 3px hsla(0, 0%, 0%, 0.12),
+    0 1px 2px hsla(0, 0%, 0%, 0.24);
+  --double-shadow-sm: 0 3px 6px hsla(0, 0%, 0%, 0.15),
+    0 2px 4px hsla(0, 0%, 0%, 0.12);
+  --double-shadow-md: 0 10px 20px hsla(0, 0%, 0%, 0.15),
+    0 3px 6px hsla(0, 0%, 0%, 0.1);
+  --double-shadow-lg: 0 15px 25px hsla(0, 0%, 0%, 0.15),
+    0 5px 10px hsla(0, 0%, 0%, 0.05);
+  --double-shadow-xl: 0 20px 40px hsla(0, 0%, 0%, 0.2);
+
+  /* inset shadows */
+  --inset-shadow-sm: inset 0px 0px 3px 0px hsla(0, 0%, 0%, 0.15);
+
+  /**
+     * Link Options
+     */
+  --link-color: var(--accent);
+
+  /**
+     * Transitions
+     */
+  --standard-transition-length: 0.3s;
+}

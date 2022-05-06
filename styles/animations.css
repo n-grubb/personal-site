@@ -1,0 +1,17 @@
+@keyframes knock_left {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+
+@keyframes knock_right {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: rotate(2deg);
+  }
+}
